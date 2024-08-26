@@ -29,13 +29,27 @@ form.addEventListener("submit", function(event) {
 
     // EDIT FUNCTION -Extra
     editButton.addEventListener("click", function() {
-        if (!itemDiv.isContentEditable) {
-            itemDiv.contentEditable = "true";
-            editButton.textContent = "Save";
-            itemDiv.focus(); 
-        } else {
-            itemDiv.contentEditable = "false";
-            editButton.textContent = "edit";
-        }
+        itemDiv.remove()
+        const editInput = document.createElement("input")
+        editInput.value = itemDiv.textContent
+        const saveEdits = document.createElement("button")
+        saveEdits.textContent = "Save"
+        newItem.appendChild(editInput)
+        newItem.appendChild(saveEdits)
+
+        saveEdits.addEventListener("click", ()=> {
+            newItem.append(itemDiv)
+            itemDiv.textContent = editInput.value
+            editInput.remove()
+            saveEdits.remove()
+        })
+        // if (!itemDiv.isContentEditable) {
+        //     itemDiv.contentEditable = "true";
+        //     editButton.textContent = "Save";
+        //     itemDiv.focus(); 
+        // } else {
+        //     itemDiv.contentEditable = "false";
+        //     editButton.textContent = "edit";
+        // }
     })
 })

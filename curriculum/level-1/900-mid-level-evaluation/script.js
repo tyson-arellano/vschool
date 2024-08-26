@@ -11,5 +11,6 @@
 
 //Event listener on "click"-arrow fuction calls changeTextContent function
 document.getElementById("changeButton").addEventListener("click", () => { 
-    changeTextContent("heading", "This is the new heading text!") 
+    changeTextContent("heading", "This is the new heading text!")
+    changeTextContent("paragraph", "New new paragraph") 
 })
