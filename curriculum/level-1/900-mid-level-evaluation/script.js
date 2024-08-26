@@ -9,6 +9,7 @@
 //changeTextContent("heading", 'Welcome to my website!')
 //changeTextContent("paragraph", 'This is a sample paragraph.')
 
-document.getElementById("changeButton").addEventListener("click", () => { //Event listener on "click" arrow fuction calls changeTextContent
+//Event listener on "click"-arrow fuction calls changeTextContent function
+document.getElementById("changeButton").addEventListener("click", () => { 
     changeTextContent("heading", "This is the new heading text!") 
 })
