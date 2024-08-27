@@ -36,7 +36,7 @@ form.addEventListener("submit", function(event) {
         saveEdits.textContent = "Save"
         newItem.appendChild(editInput)
         newItem.appendChild(saveEdits)
-
+        
         saveEdits.addEventListener("click", ()=> {
             newItem.append(itemDiv)
             itemDiv.textContent = editInput.value
