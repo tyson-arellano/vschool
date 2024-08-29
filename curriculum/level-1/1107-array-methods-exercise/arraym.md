@@ -1,7 +1,9 @@
 // JS Array Methods
 
+
 // Full list can be found here: https://www.w3schools.com/jsref/jsref_obj_array.asp
 
+ var arrOfFoods = ["pancake", "egg", "ice cream", "pizza", "hamburger"]
 
 // push - adds item(s) to the end of the array
     // arrOfFoods.push("cereal")
@@ -40,7 +42,7 @@
     // var joinedName = splitName.join("")
     // console.log(joinedName)
 
-// reverse
+// reverse-change the string
     // var name = "rick" // kcir
     // var splitName = name.split("")
     // var reversedArr = splitName.reverse()
@@ -50,7 +52,7 @@
     // console.log(allAtOnce)
     
 // splice - change the orignal array
-    var arrOfFoods = ["pancake", "egg", "ice cream", "pizza", "hamburger"]
+   
     
     arrOfFoods.splice(2, 2, "bacon", "ice cream")
     console.log(arrOfFoods)
