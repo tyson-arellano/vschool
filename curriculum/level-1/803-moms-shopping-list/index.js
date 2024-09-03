@@ -29,7 +29,7 @@ form.addEventListener("submit", function(event) {
 
     // EDIT FUNCTION -Extra
     editButton.addEventListener("click", function() {
-        itemDiv.remove()
+        itemDiv.style.display = "none"
         const editInput = document.createElement("input")
         editInput.value = itemDiv.textContent
         const saveEdits = document.createElement("button")
@@ -38,8 +38,9 @@ form.addEventListener("submit", function(event) {
         newItem.appendChild(saveEdits)
         
         saveEdits.addEventListener("click", ()=> {
-            newItem.append(itemDiv)
+            
             itemDiv.textContent = editInput.value
+            itemDiv.style.display = "block"
             editInput.remove()
             saveEdits.remove()
         })
